@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import { coachData } from "@/lib/trainData";
 
+
 const Filter = () => {
     return (
         <div className="flex flex-col border-2 w-1/4">
@@ -11,8 +12,8 @@ const Filter = () => {
             <div className="border-t-2 px-4 py-2">
                 <label className="block mb-1 font-semibold">Journey Class:</label>
                 <div className="grid grid-cols-2">
-                    {coachData.map((coach: any) => (
-                        <label className="inline-flex items-center">
+                    {coachData.map((coach: any, index: number) => (
+                        <label key={index} className="inline-flex items-center">
                             <input
                                 type="checkbox"
                                 className="form-checkbox h-5 w-5 text-gray-600"
